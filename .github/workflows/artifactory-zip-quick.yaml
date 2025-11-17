@@ -1,21 +1,21 @@
 name: Build and Push Zip to Artifactory - Quick
 
 on:
-  #push:
-  #  paths:
-  #    - "API/**"
-  #  branches:
-  #    - main
+  push:
+    paths:
+      - "API/**"
+    branches:
+      - main
   workflow_dispatch: {}
 
 env:
-  OCTOPUS_URL: https://your.octopus.app
-  OCTOPUS_SERVICE_ACCOUNT: service account id
-  OCTOPUS_SPACE: Your space
-  PACKAGE_ID: API
+  OCTOPUS_URL: https://wrg.octopus.app
+  OCTOPUS_SERVICE_ACCOUNT: b45a10cc-1380-480d-ab25-28e36d54cd63
+  OCTOPUS_SPACE: New Cascadia Imports
+  PACKAGE_ID: LoanPilot.ApplicationMicrosite
   ARTIFACTORY_URL: https://artifactory.octopussamples.com/artifactory
   ARTIFACTORY_REPOSITORY: demo-octopus-app-generic
-  ARTIFACTORY_ORG: app.octopus.your-domain.your-space
+  ARTIFACTORY_ORG: app.octopus.wrg.new-cascadia-imports
 
 jobs:
   build:
